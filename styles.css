@@ -1,0 +1,179 @@
+/* Animace pro změnu ceny - odstraněny */
+.price-up {
+    /* Animace odstraněna */
+}
+.price-down {
+    /* Animace odstraněna */
+}
+
+/* Responsivní velikost textu */
+.price-text {
+    font-size: 20rem; /* Zvětšeno na 20rem */
+    font-weight: 900; /* Black */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Stín textu pro lepší čitelnost */
+    white-space: nowrap; /* Zabrání zalomení textu */
+}
+
+.indicator-text {
+    font-size: 8rem; /* Ještě více zvětšeno */
+    font-weight: 600; /* Semi-bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Stín textu pro lepší čitelnost */
+}
+
+/* Responsivní velikost pro menší obrazovky */
+@media (max-width: 1024px) {
+    .price-text {
+        font-size: 12.5rem;
+    }
+}
+
+/* Responsivní velikost pro střední obrazovky */
+@media (max-width: 768px) {
+    .price-text {
+        font-size: 8rem;
+    }
+}
+
+/* Responsivní velikost pro malé obrazovky */
+@media (max-width: 640px) {
+    .price-text {
+        font-size: 6rem;
+    }
+}
+
+/* Responsivní velikost pro velmi malé obrazovky */
+@media (max-width: 400px) {
+    .price-text {
+        font-size: 5rem;
+    }
+}
+
+/* Automatické zmenšení textu pro dlouhé čísla */
+@media (max-width: 768px) {
+    .price-text[data-length="9"] {
+        font-size: 5.5rem;
+    }
+
+    .price-text[data-length="10"] {
+        font-size: 5rem;
+    }
+
+    .price-text[data-length="11"] {
+        font-size: 4.5rem;
+    }
+
+    .price-text[data-length="12"] {
+        font-size: 4rem;
+    }
+}
+
+/* Základní styly */
+* {
+    font-family: 'Source Sans 3', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%; /* Roztáhnuto na celou šířku */
+    height: 100vh; /* Roztáhnuto na celou výšku */
+    margin: 0; /* Žádné okraje */
+    padding: 1.5rem; /* Zmenšen padding na 1,5 rem */
+    background-color: rgba(31, 41, 55, 0.4); /* Zachována průhlednost */
+    backdrop-filter: blur(3px); /* Zachováno rozmazání pozadí */
+    -webkit-backdrop-filter: blur(3px); /* Pro Safari */
+    overflow: auto; /* Povolení scrollování pokud je obsah větší */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-box {
+    background-color: transparent; /* Žádné pozadí */
+    padding: 0; /* Žádný padding */
+    margin-bottom: 1.5rem; /* Zmenšeno pro lepší přizpůsobení */
+    width: 100%; /* Roztáhnuto na celou šířku */
+}
+
+.price-container {
+    font-weight: bold;
+    padding-top: 1rem; /* Zmenšeno pro lepší přizpůsobení */
+    padding-bottom: 1rem; /* Zmenšeno pro lepší přizpůsobení */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Zabrání zalomení textu */
+    width: 100%; /* Roztáhnuto na celou šířku */
+    overflow: hidden; /* Skryje přeteklý obsah */
+}
+
+.price-wrapper {
+    display: inline-flex;
+    align-items: center; /* Zarovnání na střed vertikálně */
+    justify-content: center;
+    white-space: nowrap; /* Zabrání zalomení textu */
+    overflow: hidden; /* Skryje přeteklý obsah */
+    text-overflow: ellipsis; /* Zobrazí tři tečky, pokud text přeteče */
+}
+
+.price-change {
+    vertical-align: middle;
+    margin-right: 2rem; /* Nastaveno přesně na 2rem */
+    display: flex; /* Použití flexboxu pro lepší zarovnání */
+    align-items: center; /* Vertikální zarovnání na střed */
+    justify-content: center; /* Horizontální zarovnání na střed */
+}
+
+.footer {
+    margin-top: 1.5rem; /* mt-6 */
+    text-align: center;
+    color: white; /* Změněno na bílou pro lepší čitelnost */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Stín textu pro lepší čitelnost */
+    font-size: 1rem; /* Zvětšeno pro lepší čitelnost */
+    font-weight: 600; /* Semi-bold pro lepší čitelnost */
+    background-color: transparent; /* Žádné pozadí */
+    padding: 0.75rem; /* Zvětšen padding */
+}
+
+#timestamp {
+    font-weight: 700; /* Bold pro zvýraznění */
+    color: #10b981; /* Zelená barva pro zvýraznění */
+}
+
+/* Barvy pro indikátory */
+.text-green-500 {
+    color: #10b981;
+}
+
+.text-red-500 {
+    color: #ef4444;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+/* Statická barva ceny */
+.price-static-color {
+    color: #ff9900; /* Oranžová barva */
+}
